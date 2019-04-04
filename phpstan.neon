@@ -1,0 +1,5 @@
+parameters:
+    excludes_analyse:
+        - %rootDir%/../../../tests/**
+        - %rootDir%/../../../vendor/**
+        - %rootDir%/../../../examples/**
