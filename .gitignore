@@ -3,4 +3,5 @@ vendor/
 phpunit.xml
 composer.lock
 build/
+tests/_reports
 .phpunit.result.cache
