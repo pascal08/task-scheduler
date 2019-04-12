@@ -118,6 +118,12 @@ class PhpCommand extends AbstractCommand
      */
     private function getFileContent(string $script): string
     {
-        return file_get_contents($script);
+        $contents = file_get_contents($script);
+
+        if(!$contents) {
+            throw new CouldNotReadFileException();
+        }
+
+        return $contents;
     }
 }
