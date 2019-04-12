@@ -2,8 +2,7 @@
 
 <phpunit backupGlobals="true"
          colors="true"
-         stopOnFailure="false"
-         bootstrap="vendor/autoload.php">
+         stopOnFailure="false">
 
     <testsuites>
         <testsuite name="TaskScheduler Test Suite">
