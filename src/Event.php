@@ -89,7 +89,7 @@ class Event implements Runnable
     public function run(): void
     {
         foreach ($this->rejects as $callback) {
-            if (call_user_func($callback)) {
+            if ((bool) call_user_func($callback)) {
                 return;
             }
         }

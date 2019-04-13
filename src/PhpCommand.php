@@ -8,6 +8,9 @@ use Symfony\Component\Process\Process;
 class PhpCommand extends AbstractCommand
 {
 
+    /**
+     * @var array
+     */
     private static $phpTags = ['<?php', '<?'];
 
     /**
@@ -94,7 +97,7 @@ class PhpCommand extends AbstractCommand
     /**
      * @throws InvalidPhpScript
      */
-    private function guardAgainstInvalidScript()
+    private function guardAgainstInvalidScript(): void
     {
         if (!$this->isPhpScript($this->script)) {
             throw new InvalidPhpScript();
@@ -120,7 +123,7 @@ class PhpCommand extends AbstractCommand
     {
         $contents = file_get_contents($script);
 
-        if(!$contents) {
+        if($contents === false) {
             throw new CouldNotReadFileException();
         }
 

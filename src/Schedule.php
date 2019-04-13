@@ -48,7 +48,7 @@ class Schedule
     /**
      * @param \Pascal\TaskScheduler\Event $event
      */
-    public function scheduleEvent(Event $event)
+    public function scheduleEvent(Event $event): void
     {
         $this->events[] = $event;
     }

@@ -46,7 +46,7 @@ abstract class AbstractCommand implements CommandInterface
      */
     protected function runProcess(Process $process): void
     {
-        if ($this->timeoutAfter) {
+        if ($this->timeoutAfter > 0) {
             $process->setTimeout($this->timeoutAfter);
         }
 
