@@ -126,5 +126,4 @@ class MutexAdapterTest extends TestCase
 
         $this->assertFalse($mutexAdapter->release($key));
     }
-
 }

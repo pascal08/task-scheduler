@@ -104,7 +104,7 @@ class EventTest extends TestCase
             ->method('run');
         $event = new Event($commandMock);
 
-        $event->skip(function() {
+        $event->skip(function () {
             return true;
         });
 
@@ -122,7 +122,7 @@ class EventTest extends TestCase
             ->method('run');
         $event = new Event($commandMock);
 
-        $event->skip(function() {
+        $event->skip(function () {
             return false;
         });
 
@@ -179,7 +179,7 @@ class EventTest extends TestCase
         $closureFunc->expects($this->once())
             ->method('__invoke');
 
-        $afterCallback = function() use ($closureFunc) {
+        $afterCallback = function () use ($closureFunc) {
             call_user_func($closureFunc);
         };
 

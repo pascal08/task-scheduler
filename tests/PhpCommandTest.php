@@ -116,5 +116,4 @@ class PhpCommandTest extends TestCase
 
         $phpCommand->run();
     }
-
 }

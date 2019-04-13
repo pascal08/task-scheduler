@@ -81,5 +81,4 @@ class ShellCommandTest extends TestCase
 
         $shellCommand->timeoutAfter(1)->run();
     }
-
 }

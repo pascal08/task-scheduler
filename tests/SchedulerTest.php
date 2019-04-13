@@ -69,5 +69,4 @@ class SchedulerTest extends TestCase
 
         $this->assertCount(3, $schedule->getEvents());
     }
-
 }
