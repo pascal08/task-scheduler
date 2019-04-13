@@ -123,7 +123,7 @@ class PhpCommand extends AbstractCommand
     {
         $contents = file_get_contents($script);
 
-        if($contents === false) {
+        if ($contents === false) {
             throw new CouldNotReadFileException();
         }
 
