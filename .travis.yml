@@ -14,8 +14,6 @@ before_script:
 - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction --prefer-dist
 
 script:
-- ./vendor/bin/phpcs
-- ./vendor/bin/phpstan analyse --level=7 ./ -c ./phpstan.neon
 - ./vendor/bin/phpunit
 
 after_script:
